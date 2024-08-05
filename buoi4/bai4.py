@@ -4,8 +4,7 @@ s = set(int(x) for x in s)
 m = int(input())
 
 s_tmp = set()
-lst = sorted(s)  # Chuyển đổi set sang list và sắp xếp
-
+lst = sorted(s)
 sum = 0
 for i in lst:
     sum += i
