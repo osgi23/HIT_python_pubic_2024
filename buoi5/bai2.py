@@ -1,22 +1,10 @@
-import random
+s = input("Nhập một chuỗi: ")
+str = {}
 
-list_password = ["CNTT", "KHMT", "KTPM", "HTTT"]
+for char in s:
+    if char in str:
+        str[char] += 1
+    else:
+        str[char] = 1
 
-N = int(input())
-
-tk = {}
-
-for i in range(N):
-    username = f"202360{str(i+1).zfill(4)}"
-    
-    password = random.choice(list_password) + username
-    
-    tk[f"Account{i+1}"] = {
-        "Username": username,
-        "Password": password
-    }
-
-for account, info in tk.items():
-    print(f"{account}:")
-    print(f"  Username: {info['Username']}")
-    print(f"  Password: {info['Password']}")
+print(str)
